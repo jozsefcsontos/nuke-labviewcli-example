@@ -77,5 +77,12 @@ class Build : NukeBuild
         .DependsOn(VIAnalyzerTests)
         .Executes(() =>
         {
+            LabVIEWCLIRunUnitTests(s => s
+                .SetProjectPath(SourceDirectory / "LabVIEWExample" / "LabVIEWExample.lvproj")
+                .SetJUnitReportPath(ArtifactsDirectory / "UnitTestResults.xml")
+                .SetPortNumber(5001));
+
+            LabVIEWCLICloseLabVIEW(s => s
+                .SetPortNumber(5001));
         });
 }

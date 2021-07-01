@@ -4,5 +4,9 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
+	<Item Name="HelloWorld.lvtest" Type="TestItem" URL="../HelloWorld.lvtest">
+		<Property Name="utf.test.bind" Type="Str">LibraryExample.lvlib:HelloWorld.vi</Property>
+		<Property Name="utf.vector.test.bind" Type="Str">F391C442-A69E-058B-C7FC-8042B5343492</Property>
+	</Item>
 	<Item Name="HelloWorld.vi" Type="VI" URL="../HelloWorld.vi"/>
 </Library>
