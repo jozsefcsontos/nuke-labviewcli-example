@@ -9,4 +9,9 @@
     * UTF Junit Report library
 * LabVIEW VI Analyzer Toolkit 2020 (64-bit)
 * Visual Studio 2019 installation
-    * Specify
+    * Specify the nuke-labviewcli-example\nuget folder as a Package Source in Visual Studio (this is a temporary step for now)
+
+## How to build and test
+* Open the nuke-labviewcli-example.sln with Visual Studio
+* Open the Terminal view
+* Enter nuke
