@@ -51,7 +51,7 @@ class Build : NukeBuild
             LabVIEWCLIExecuteBuildSpec(s => s
                 .SetProjectPath(SourceDirectory / "LabVIEWExample" / "LabVIEWExample.lvproj")
                 .SetBuildSpecName("PackedLibraryExample")
-                .SetLogToConsole(true)
+                .EnableLogToConsole()
                 .SetVerbosity(LogVerbosity.Diagnostic)
                 .SetPortNumber(5001));
 
