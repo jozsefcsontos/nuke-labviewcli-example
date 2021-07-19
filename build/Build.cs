@@ -39,6 +39,17 @@ class Build : NukeBuild
             EnsureCleanDirectory(ArtifactsDirectory);
         });
 
+    Target Version => _ => _
+        .DependsOn(Clean)
+        .Executes(() =>
+        {
+            LabVIEWCLICustomOperation(s => s
+                .SetOperationName("SetBuildSpecVersion")
+                .SetOperationBehavior($"-ProjectPath {SourceDirectory / "LabVIEWExample" / "LabVIEWExample.lvproj"} -Version 1.2.3.0")
+                .SetAdditionalOperationDirectory(@"C:\temp\SetBuildSpecVersion")
+                .SetPortNumber(5001));
+        });
+
     Target Compile => _ => _
         .DependsOn(Clean)
         .Executes(() =>
